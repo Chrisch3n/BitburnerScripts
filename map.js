@@ -2,15 +2,15 @@
 2022-02-03
 - Added Help menu
 - Added colored Symbols, Backdoor indicator, Required Ports for Hack and Maximum Server Money
-- Switches for added information
+- Switches for added information (Change constants at the beginning of code to (de)-activate them individually)
 - Information if Server is hackable now checks also required Server ports against player capability 
 */
 
-// Switches
+// Switches (Change constants to change design of Tree)
 const controlSymbolTypeColor = true; // True = Colored Root Access Symbols / False = Asscii Art
 const controlPortsRequiredIndicator = true; // True = Required Ports will be shown after Server Hacking Level Requirement / False = Hidden
 const controlBackdoorIndicator = true; // True = Backdoor Indecator active / False = Hidden
-const controlMaxMoneyIndicator = false; // True = Show Max Money of Server / False = Hidden
+const controlMaxMoneyIndicator = true; // True = Show Max Money of Server / False = Hidden
 
 var _ns;
 export async function main(ns) {
