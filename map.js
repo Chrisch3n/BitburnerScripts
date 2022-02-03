@@ -1,4 +1,10 @@
-// Script based on: https://www.reddit.com/r/Bitburner/comments/rmpgn5/map_code/ by u/Ravery-net
+/* Script based on: https://www.reddit.com/r/Bitburner/comments/rmpgn5/map_code/ by u/Ravery-net
+2022-02-03
+- Added Help menu
+- Added colored Symbols, Backdoor indicator, Required Ports for Hack and Maximum Server Money
+- Switches for added information
+- Information if Server is hackable now checks also required Server ports against player capability 
+*/
 
 // Switches
 const controlSymbolTypeColor = true; // True = Colored Root Access Symbols / False = Asscii Art
@@ -132,3 +138,5 @@ function HackablePortsPlayer() {
 	}
 	return hackablePortsPlayer;
 }
+
+//var hacked = (_ns.hasRootAccess(serverName)) ? "██ " : "[] ";
