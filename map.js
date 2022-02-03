@@ -1,4 +1,4 @@
-// Script based on: https://www.reddit.com/r/Bitburner/comments/rmpgn5/map_code/
+// Script based on: https://www.reddit.com/r/Bitburner/comments/rmpgn5/map_code/ by u/Ravery-net
 
 // Switches
 const controlSymbolTypeColor = true; // True = Colored Root Access Symbols / False = Asscii Art
@@ -13,27 +13,27 @@ export async function main(ns) {
 	let input = ns.args[0];
 
 	// Help Menu
-	if (input === "-h" || input === "-help" || input === "help"|| input === "-?" || input === "?") {
+	if (input === "-h" || input === "-help" || input === "help" || input === "-?" || input === "?") {
 		ns.tprint("");
-		ns.tprint(" ****************************  Help Menu  ****************************");
+		ns.tprint("****************************************************  Help Menu  ****************************************************");
 		ns.tprint('Mapping: "Root access", [Backdoor], "Server name", ("Server Level", [Required Ports]), [Max. Money Server], [Hacking possible]');
 		if (controlSymbolTypeColor) {
 			ns.tprint("- \u2705 = Root access / \u274C = No root access ");
 			ns.tprint("- [Optional] Backdoor: [BD] = Backdoor installed / [x] = No Backdoor");
 			ns.tprint("- [Optional] Port Info: Variable behind Servername (Required Hacking Level - Required Server Ports)");
-			ns.tprint('- "!!!!!!" at the end indicates, that your hacking and port hacking level is above the'); 
+			ns.tprint('- If "!!!!!!" at the end is shown, your hacking and port hacking level is above the');
 			ns.tprint('  requirements of the server but you dont have root access yet.');
 		} else {
 			ns.tprint("- ██ = Root access / [ ] = No root access ");
 			ns.tprint("- [Optional] Backdoor: [BD] = Backdoor installed / [NO BD] = No Backdoor");
 			ns.tprint("- [Optional] Port Info: Variable behind Servername (Required Hacking Level - Required Server Ports)");
-			ns.tprint('- "!!!!!!" at the end indicates, that your hacking and port hacking level is above the'); 
+			ns.tprint('- "!!!!!!" at the end indicates, that your hacking and port hacking level is above the');
 			ns.tprint('  requirements of the server but you dont have root access yet.');
 		}
 		ns.tprint("");
-		ns.tprint("Note: Colored Symbols, Required Server Ports and Backdoor Indicator can be (de)activated ");
-		ns.tprint("      by changing the constants at the beginning of the script")
-		ns.tprint(" *********************************************************************"); 
+		ns.tprint("Note: Colored Symbols, Required Server Ports, Backdoor Indicator and Max. Money can be ");
+		ns.tprint("      (de)activated by changing the constants at the beginning of the script")
+		ns.tprint("*********************************************************************************************************************");
 	} else {
 		ScanServer("home", seenList, 0, "");
 		ns.tprint("Note: Add -h to function call to open help");
